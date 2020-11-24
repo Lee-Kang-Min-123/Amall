@@ -44,7 +44,7 @@ public class HomeController {
 
 		List<PubMap> resultMap = testMapper.selectTestData();
 		
-		//테스트
+		//테스트2
 		model.addAttribute("resultMap", resultMap);
 
 		return "home";
