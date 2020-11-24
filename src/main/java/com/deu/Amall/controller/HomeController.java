@@ -43,6 +43,8 @@ public class HomeController {
 		model.addAttribute("serverTime", formattedDate );
 
 		List<PubMap> resultMap = testMapper.selectTestData();
+		
+		//Å×½ºÆ®
 		model.addAttribute("resultMap", resultMap);
 
 		return "home";
