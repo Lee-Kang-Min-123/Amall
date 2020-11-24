@@ -38,13 +38,14 @@ public class HomeController {
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 		
-		String formattedDate = dateFormat.format(date);
+		String formattedDate;
+		formattedDate = dateFormat.format(date);
 		
 		model.addAttribute("serverTime", formattedDate );
 
 		List<PubMap> resultMap = testMapper.selectTestData();
 		
-		//테스트4
+		//테스트5
 		model.addAttribute("resultMap", resultMap);
 
 		return "home";
