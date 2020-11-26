@@ -1,4 +1,6 @@
-package com.deu.Amall.domain;
+package com.deu.Amall.service;
+
+import com.deu.Amall.domain.MemberVO;
 
 public interface MemberDAO {
 	
