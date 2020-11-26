@@ -1,17 +1,19 @@
 package com.deu.Amall.service;
 
-import javax.inject.Inject;
+import org.springframework.beans.factory.annotation.Autowired;
 
+import com.deu.Amall.dao.MemberMapper;
 import com.deu.Amall.domain.MemberVO;
 
 public class MemberServiceImpl implements MemberService{
 	
-	@Inject MemberDAO dao;
+	@Autowired
+	MemberMapper membermapper;
 	
 	@Override
-	public void register(MemberVO vo) throws Exception {
+	public void insert(MemberVO member) throws Exception {
 		
-		dao.register(vo);
+		membermapper.insert(member);
 		
 	}
 

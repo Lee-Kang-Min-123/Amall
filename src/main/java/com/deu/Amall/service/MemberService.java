@@ -3,7 +3,9 @@ package com.deu.Amall.service;
 import com.deu.Amall.domain.MemberVO;
 
 public interface MemberService {
-	public void register(MemberVO vo) throws Exception;
+	
+	//회원가입
+	public void insert(MemberVO member) throws Exception;
 	
 
 }
