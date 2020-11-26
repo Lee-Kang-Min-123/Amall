@@ -4,7 +4,7 @@
 
 <mapper namespace="com.deu.Amall.dao.MemberMapper">
 	<!-- 회원가입 -->
-	<insert id="register">
+	<insert id="insert">
 		INSERT INTO userInfo(userType,userName,userId,password,birthday,gender,email,contact,address)
 		VALUES(#{userType},#{userName},#{userId}, #{password},#{birthday}, #{gender}, #{email},#{contact},#{address})
 	</insert>
