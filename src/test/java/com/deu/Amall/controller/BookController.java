@@ -1,3 +1,5 @@
+//메인페이지 controller
+
 package com.deu.Amall.controller;
 
 import org.springframework.stereotype.Controller;
