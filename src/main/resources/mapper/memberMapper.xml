@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+
 <mapper namespace="memberMapper">
 	<!-- 회원가입 -->
 	<insert id="register">
