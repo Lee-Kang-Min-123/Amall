@@ -3,8 +3,8 @@
 <mapper namespace="memberMapper">
 	<!-- 회원가입 -->
 	<insert id="register">
-		INSERT INTO userInfo(userNo,userType,userName,userId,password,birthday,gender,email,contact,address)
-		VALUES(#{userNo},#{userType},#{userName},#{userId}, #{password}, #{us}, #{birthday})
+		INSERT INTO userInfo(userType,userName,userId,password,birthday,gender,email,contact,address)
+		VALUES(#{userType},#{userName},#{userId}, #{password},#{birthday}, #{gender}, #{email},#{contact},#{address})
 	</insert>
 	
 	<!-- 로그인 -->
