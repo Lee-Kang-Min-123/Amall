@@ -1,9 +1,11 @@
-package com.deu.Amall.domain;
+package com.deu.Amall.service;
 
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
+
+import com.deu.Amall.domain.MemberVO;
 
 @Repository
 public class MemberDAOImpl implements MemberDAO {

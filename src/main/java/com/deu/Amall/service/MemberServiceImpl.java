@@ -2,7 +2,6 @@ package com.deu.Amall.service;
 
 import javax.inject.Inject;
 
-import com.deu.Amall.domain.MemberDAO;
 import com.deu.Amall.domain.MemberVO;
 
 public class MemberServiceImpl implements MemberService{
