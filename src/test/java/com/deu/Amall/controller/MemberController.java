@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.deu.Amall.domain.MemberVO;
 import com.deu.Amall.service.MemberService;
 
 import lombok.extern.log4j.Log4j;
@@ -15,7 +16,8 @@ import lombok.extern.log4j.Log4j;
 @Log4j
 public class MemberController {
 	
-	@Autowired
+	//회원가입
+	@Autowired //MemberService.java가 MemberController.java에 자동 주입
 	private MemberService memberservice;
 	
 	//회원가입 페이지 이동
@@ -26,6 +28,20 @@ public class MemberController {
 				
 	}
 	
+	//회원가입
+		@RequestMapping(value="/join" ,method = RequestMethod.POST)
+		public String joinPOST(MemberVO member) throws Exception{
+			log.info("회원가입 진입");
+			
+			//회원가입 service 실행
+			memberservice.insert(member);
+			
+			log.info("회원가입 service 성공");
+			
+			return null;
+			
+		}
+	
 	
 	//로그인 페이지 이동
 	@RequestMapping(value = "login", method = RequestMethod.GET)
@@ -34,5 +50,7 @@ public class MemberController {
 		log.info("로그인 페이지 진입");
 		
 	}
+	
+	
 	
 }
