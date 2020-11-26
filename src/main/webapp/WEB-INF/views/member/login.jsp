@@ -12,7 +12,7 @@
    		 <form action="login" method = "post">
 			<table>
 				<tr><td>Login Select</td> <!-- 로그인 종류 선택-->
-					<td><select name = "usertype">
+					<td><select name ="usertype">
 						<option name="usertype" value="unknown">Your Select
 						<option name="usertype" value="A">Administrator
 						<option name="usertype" value="C">Customer</select>
