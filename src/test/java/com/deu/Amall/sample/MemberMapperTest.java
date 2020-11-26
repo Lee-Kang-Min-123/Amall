@@ -20,8 +20,12 @@ public class MemberMapperTest {
 		member.setUserName("spring_test"); //회원이름
 		member.setUserId("spring_test"); //회원id
 		member.setPassword("spring_test"); //회원이름
-		//member.setBirthday("spring_test"); //회원생일
+		member.setBirthday(birthday); //회원생일
 		member.setGender("spring_test"); //회원성별
+		member.setEmail("spring_test");
+		member.setAddress("spring_test");
+		
+		membermapper.insert(member);
 	}
 
 }
