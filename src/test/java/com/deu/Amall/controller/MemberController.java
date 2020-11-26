@@ -22,7 +22,7 @@ public class MemberController {
 	
 	//회원가입 페이지 이동
 	@RequestMapping(value = "join", method = RequestMethod.GET)
-	public void joinGET() {
+	public void getJoin() {
 		
 		log.info("회원가입 페이지 진입");
 				
@@ -30,7 +30,7 @@ public class MemberController {
 	
 	//회원가입
 		@RequestMapping(value="/join" ,method = RequestMethod.POST)
-		public String joinPOST(MemberVO member) throws Exception{
+		public String postJoin(MemberVO member) throws Exception{
 			log.info("회원가입 진입");
 			
 			//회원가입 service 실행
@@ -38,7 +38,7 @@ public class MemberController {
 			
 			log.info("회원가입 service 성공");
 			
-			return null;
+			return "redirect:/";
 			
 		}
 	
