@@ -1,3 +1,5 @@
+// 회원과 관련된 요청 controller
+
 package com.deu.Amall.controller;
 
 import org.springframework.stereotype.Controller;
@@ -17,6 +19,7 @@ public class MemberController {
 		log.info("회원가입 페이지 진입");
 				
 	}
+	
 	
 	//로그인 페이지 이동
 	@RequestMapping(value = "login", method = RequestMethod.GET)

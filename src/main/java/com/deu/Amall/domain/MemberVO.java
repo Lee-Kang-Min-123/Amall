@@ -1,3 +1,5 @@
+// 회원테이블 VO
+
 package com.deu.Amall.domain;
 
 import java.sql.Date;
