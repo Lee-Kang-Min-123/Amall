@@ -1,4 +1,4 @@
-// 회원테이블 VO
+// 주문디테일 테이블 VO
 
 package com.deu.Amall.domain;
 
