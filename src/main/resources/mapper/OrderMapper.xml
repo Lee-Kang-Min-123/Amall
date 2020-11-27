@@ -17,6 +17,7 @@
 	
 <!--    	<insert id="insertOrderMaster" useGeneratedKeys="true" keyColumn="order_id" keyProperty="orderId"> -->
 	<insert id="insertOrderMaster" >
+
 		<selectKey keyProperty="orderId" order="BEFORE"
 			resultType="int">
 			SELECT NVL(MAX(order_id) + 1, 1) FROM ordermaster
