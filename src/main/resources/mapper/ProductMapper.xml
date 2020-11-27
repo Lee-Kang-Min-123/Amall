@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.deu.Amall.dao.ProductMapper">
+
+    <select id="listProduct" resultType="com.deu.Amall.domain.ProductVO">
+        select 
+			product_id AS productId,
+			product_name AS productName,
+			product_price AS productPrice,
+			product_desc AS productDesc,
+			product_url AS productUrl
+		From product
+		ORDER BY product_name
+    </select>
+
+    <select id="detailProduct" resultType="com.deu.Amall.domain.ProductVO">
+        select 
+			product_id AS productId,
+			product_name AS productName,
+			product_price AS productPrice,
+			product_desc AS productDesc,
+			product_url AS productUrl
+		From product
+		WHERE product_id =#{productId}
+    </select>
+</mapper>
