@@ -10,6 +10,7 @@ public class MemberServiceImpl implements MemberService{
 	@Autowired
 	MemberMapper membermapper;
 	
+	//회원가입
 	@Override
 	public void insert(MemberVO member) throws Exception {
 		

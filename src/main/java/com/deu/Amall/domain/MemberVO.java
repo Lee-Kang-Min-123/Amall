@@ -19,6 +19,11 @@ public class MemberVO{
 	private String email;
 	private String contact;
 	private String address;
+	
+	private String insrtUserId;
+	private Date insrtDt;
+	private String updtUserId;
+	private Date updtDt;
 
 }
 
