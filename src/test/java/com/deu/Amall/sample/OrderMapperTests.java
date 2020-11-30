@@ -32,9 +32,7 @@ public class OrderMapperTests {
 		order.setOrderAmt(100.00);
 		order.setState("OPEN");
 		order.setInsrtUserId("stableyoung");
-		
-		log.info("Hello");
-		
+
 		mapper.insertOrderMaster(order);
 		
 		log.info("Order Id => " + order.getOrderId());
