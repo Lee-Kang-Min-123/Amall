@@ -3,6 +3,7 @@
 
 
 <mapper namespace="com.deu.Amall.dao.MemberMapper">
+	
 	<!-- 회원가입 -->
 	<insert id="insert">
 	

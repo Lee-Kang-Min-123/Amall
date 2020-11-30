@@ -13,12 +13,10 @@ public class MemberServiceImpl implements MemberService{
 	 @Inject
 	 private MemberDAO dao;
 	
-	//회원가입
-	@Override
-	public void insert(MemberVO member) throws Exception {
-		
-		dao.insert(member);
-		
-	}
+	 //로그인
+	 @Override
+		public MemberVO login(MemberVO member) throws Exception{
+			return dao.login(member);
+		}
 
 }

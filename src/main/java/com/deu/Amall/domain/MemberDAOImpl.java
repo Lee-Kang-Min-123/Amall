@@ -8,18 +8,14 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class MemberDAOImpl implements MemberDAO {
 
-	@Inject SqlSession sql;
+	@Inject 
+	private SqlSession sql;
 	
-	// 회원가입
-
-	@Override
-	public void insert(MemberVO member) throws Exception {
-		sql.insert("memberMapper.register", member);
-	}
+	private static String namespace = "com.deu.Amall.memberMapper";;
 	
 	@Override
-	public MemberVO login(MemberVO vo) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+	public MemberVO login(MemberVO member) throws Exception {
+		
+		return sql.selectOne("memberMApper.login", member);
 	}
 }

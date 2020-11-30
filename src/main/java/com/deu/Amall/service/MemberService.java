@@ -4,8 +4,9 @@ import com.deu.Amall.domain.MemberVO;
 
 public interface MemberService {
 	
-	//회원가입
-	public void insert(MemberVO member) throws Exception;
+	//로그인
+	public MemberVO login(MemberVO member) throws Exception;
+
 	
 
 }
