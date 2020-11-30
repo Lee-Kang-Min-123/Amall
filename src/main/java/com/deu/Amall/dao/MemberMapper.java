@@ -6,9 +6,9 @@ import com.deu.Amall.domain.MemberVO;
 
 public interface MemberMapper {
 	
-	
 	//로그인
 	public void login(MemberVO member);
+	
 
 	
 }

@@ -8,8 +8,7 @@
 	<select id="login" resultType="com.deu.Amall.domain.MemberVO">
 		select userId,password
 		from user_info
-		where userId = #{userId}
-		and password= #{password}
+		where userId = #{userId} and password= #{password}
 	
 	</select>
 	
