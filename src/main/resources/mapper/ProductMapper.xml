@@ -31,7 +31,7 @@
 		(
 		#{productId},
 		#{productType}, #{productName}, #{explanation},#{product_price}, #{inventory}
-		#{insrtUserId}, sysdate, #{insrtUserId}, sysdate
+		#{insrtUserId}, sysdate, #{updtUserId}, sysdate
 		)
 	</insert>
 </mapper>
