@@ -21,19 +21,15 @@ public class MemberMapperTest {
 	@Autowired
 	private MemberMapper membermapper; //MemberMapper.java 인터페이스
 	
-	//회원가입 테스트
+	//로그인 테스트
 	@Test
-	public void insert() throws Exception{
+	public void login() throws Exception{
 		
 		MemberVO member = new MemberVO();
-		
-		Date Now = new Date();
 		
 	
 		member.setUserId("spring_test"); //회원id
 		member.setPassword("spring_test"); //회원이름
-		
-		
 		
 		membermapper.login(member);
 	}
