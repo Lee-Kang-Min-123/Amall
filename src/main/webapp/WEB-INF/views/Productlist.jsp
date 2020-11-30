@@ -26,7 +26,7 @@
   	</table>
   	
   	<form action="productcreate" method="post">
-  		<input type ="submit" value="creat">
+  		<input type ="submit" value="create">
   	</form>
 </body>
 </html>
