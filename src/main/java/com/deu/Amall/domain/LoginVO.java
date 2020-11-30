@@ -7,7 +7,7 @@ import java.util.Date;
 import lombok.Data;
 
 @Data
-public class MemberVO{
+public class LoginVO{
 	
 	
 	private String userId;	//아이디

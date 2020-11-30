@@ -6,7 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class MemberDAOImpl implements MemberDAO {
+public class LoginDAOImpl implements LoginDAO {
 
 	@Inject 
 	private SqlSession sql;
@@ -14,7 +14,7 @@ public class MemberDAOImpl implements MemberDAO {
 	private static String namespace = "com.deu.Amall.memberMapper";;
 	
 	@Override
-	public MemberVO login(MemberVO member) throws Exception {
+	public LoginVO login(LoginVO member) throws Exception {
 		
 		return sql.selectOne("memberMapper.login", member);
 	}
