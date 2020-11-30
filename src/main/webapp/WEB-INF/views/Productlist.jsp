@@ -25,7 +25,7 @@
   	</tr>
   	</table>
   	
-  	<form action="updatelist" method="post">
+  	<form action="productcreate" method="post">
   		<input type ="submit" value="creat">
   	</form>
 </body>

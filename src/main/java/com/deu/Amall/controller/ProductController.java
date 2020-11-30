@@ -19,10 +19,14 @@ public class ProductController{
 	//1. 상품 전체 목록
 	@RequestMapping("/productlist")
 	public ModelAndView list(ModelAndView mav) {
-		log.info("1234");
 		mav.setViewName("Productlist");
 		mav.addObject("list", productService.getAllProducts());
 		return mav;
 	}
+	@RequestMapping("/productcreate")
+	public String write() {
+		return "productcreate";
+	}
+	
 	
 }
