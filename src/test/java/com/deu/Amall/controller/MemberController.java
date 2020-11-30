@@ -16,32 +16,6 @@ import lombok.extern.log4j.Log4j;
 @Log4j
 public class MemberController {
 	
-	//회원가입
-	@Autowired //MemberService.java가 MemberController.java에 자동 주입
-	private MemberService memberservice;
-	
-	//회원가입 페이지 이동
-	@RequestMapping(value = "join", method = RequestMethod.GET)
-	public void getJoin() {
-		
-		log.info("회원가입 페이지 진입");
-				
-	}
-	
-	//회원가입
-		@RequestMapping(value="/join" ,method = RequestMethod.POST)
-		public String postJoin(MemberVO member) throws Exception{
-			log.info("회원가입 진입");
-			
-			//회원가입 service 실행
-			memberservice.insert(member);
-			
-			log.info("회원가입 service 성공");
-			
-			return "redirect:/";
-			
-		}
-	
 	
 	//로그인 페이지 이동
 	@RequestMapping(value = "login", method = RequestMethod.GET)

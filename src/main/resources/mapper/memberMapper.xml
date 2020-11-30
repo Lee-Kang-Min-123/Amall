@@ -13,7 +13,7 @@
 	<!-- 로그인 -->
 	<select id="login" resultType="com.deu.Amall.domain.MemberVO">
 		select userId,password
-		from userInfo
+		from user_info
 		where userId = #{userId}
 		and password= #{password}
 	

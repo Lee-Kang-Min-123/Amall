@@ -1,20 +1,23 @@
 package com.deu.Amall.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.inject.Inject;
 
-import com.deu.Amall.dao.MemberMapper;
+import org.springframework.stereotype.Service;
+
+import com.deu.Amall.domain.MemberDAO;
 import com.deu.Amall.domain.MemberVO;
 
+@Service
 public class MemberServiceImpl implements MemberService{
 	
-	@Autowired
-	MemberMapper membermapper;
+	 @Inject
+	 private MemberDAO dao;
 	
 	//회원가입
 	@Override
 	public void insert(MemberVO member) throws Exception {
 		
-		membermapper.insert(member);
+		dao.insert(member);
 		
 	}
 
