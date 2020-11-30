@@ -15,8 +15,8 @@ public class LoginServiceImpl implements LoginService{
 	
 	 //로그인
 	 @Override
-	public LoginVO login(LoginVO member) throws Exception{
-		return dao.login(member);
+	public LoginVO login(LoginVO loginvo) throws Exception{
+		return dao.login(loginvo);
 	}
 
 }

@@ -11,11 +11,11 @@ public class LoginDAOImpl implements LoginDAO {
 	@Inject 
 	private SqlSession sql;
 	
-	private static String namespace = "com.deu.Amall.memberMapper";;
+	private static String namespace = "com.deu.Amall.LoginMapper";;
 	
 	@Override
-	public LoginVO login(LoginVO member) throws Exception {
+	public LoginVO login(LoginVO loginvo) throws Exception {
 		
-		return sql.selectOne("memberMapper.login", member);
+		return sql.selectOne("LoginMapper.login", loginvo);
 	}
 }

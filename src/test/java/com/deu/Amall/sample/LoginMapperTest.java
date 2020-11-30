@@ -16,22 +16,22 @@ import lombok.extern.log4j.Log4j;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
 @Log4j
-public class MemberMapperTest {
+public class LoginMapperTest {
 	
 	@Autowired
-	private LoginMapper membermapper; //MemberMapper.java 인터페이스
+	private LoginMapper Loginmapper; //MemberMapper.java 인터페이스
 	
 	//로그인 테스트
 	@Test
 	public void login() throws Exception{
 		
-		LoginVO member = new LoginVO();
+		LoginVO loginvo = new LoginVO();
 		
 	
-		member.setUserId("spring_test"); //회원id
-		member.setPassword("spring_test"); //회원이름
+		loginvo.setUserId("spring_test"); //회원id
+		loginvo.setPassword("spring_test"); //회원이름
 		
-		membermapper.login(member);
+		Loginmapper.login(loginvo);
 	}
 
 }

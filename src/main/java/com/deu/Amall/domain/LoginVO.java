@@ -2,8 +2,6 @@
 
 package com.deu.Amall.domain;
 
-import java.util.Date;
-
 import lombok.Data;
 
 @Data
