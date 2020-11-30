@@ -3,7 +3,7 @@
 
 <mapper namespace="com.deu.Amall.dao.ProductMapper">
 
-    <select id="listProduct" resultType="com.deu.Amall.util.PubMap">
+    <select id="getAllProducts" resultType="com.deu.Amall.util.PubMap">
         select 
 			product_id  ,
 			product_type ,

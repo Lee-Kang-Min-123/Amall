@@ -3,13 +3,12 @@ package com.deu.Amall.service;
 import java.util.List;
 
 import com.deu.Amall.domain.ProductVO;
+import com.deu.Amall.util.PubMap;
  
 public interface ProductService {
  
     
-    List<ProductVO> listProduct();
-    ProductVO detailProduct(int productId);
-    void updateProduct(ProductVO vo);
+	public List<PubMap> getAllProducts();
     void insertProduct(ProductVO vo);
-	void deleteProduct(int productId);
+	
 }

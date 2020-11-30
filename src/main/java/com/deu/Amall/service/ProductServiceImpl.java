@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.deu.Amall.dao.ProductMapper;
 import com.deu.Amall.domain.ProductVO;
-
+import com.deu.Amall.util.PubMap;
 
 import lombok.AllArgsConstructor;
 import lombok.Setter;
@@ -23,34 +23,18 @@ import lombok.extern.log4j.Log4j;
 public class ProductServiceImpl implements ProductService {
 
 	@Autowired
-	private ProductService productservice;
+	private ProductMapper mapper;
 // 상품목록
 	@Override
-	public List<ProductVO> listProduct() {
+	public List<PubMap> getAllProducts() {
 		// TODO Auto-generated method stub
-		return productservice.listProduct();
+		return mapper.getAllProducts();
 	}
-	//상품상세
-	@Override
-	public ProductVO detailProduct(int productId) {
-		// TODO Auto-generated method stub
-		return productservice.detailProduct(productId);
-	}
-	//상품수정
-	@Override
-	public void updateProduct(ProductVO vo) {
-		// TODO Auto-generated method stub
-	}
-	//상품삭제
-	
-	@Override
-	public void deleteProduct(int productId) {
-		// TODO Auto-generated method stub
-		
-	}
+
 	@Override
 	public void insertProduct(ProductVO vo) {
 		// TODO Auto-generated method stub
+		mapper.insert(vo);
 		
 	}
 }
