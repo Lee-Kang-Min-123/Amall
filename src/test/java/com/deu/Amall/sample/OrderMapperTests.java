@@ -34,7 +34,6 @@ public class OrderMapperTests {
 		order.setInsrtUserId("stableyoung");
 
 		mapper.insertOrderMaster(order);
-		
 		log.info("Order Id => " + order.getOrderId());
 	}
 
