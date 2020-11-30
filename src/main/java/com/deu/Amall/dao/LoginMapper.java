@@ -3,11 +3,12 @@
 package com.deu.Amall.dao;
 
 import com.deu.Amall.domain.LoginVO;
+import com.deu.Amall.util.PubMap;
 
 public interface LoginMapper {
 	
 	//로그인
-	public void login(LoginVO member);
+	public PubMap login(LoginVO member);
 	
 
 	
