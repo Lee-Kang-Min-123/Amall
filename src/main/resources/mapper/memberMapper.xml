@@ -4,13 +4,6 @@
 
 <mapper namespace="com.deu.Amall.dao.MemberMapper">
 	
-	<!-- 회원가입 -->
-	<insert id="insert">
-	
-		INSERT INTO user_info(userType,userName,userId,password,birthday,gender,email,contact,address,insrtUserId,insrtDt,updtUserId, updtDt)
-		VALUES(#{userType},#{userName},#{userId}, #{password},#{birthday}, #{gender}, #{email},#{contact},#{address}, #{insrtUserId}, #{insrtDt}, #{updtUserId},#{updtDt})
-	</insert>
-	
 	<!-- 로그인 -->
 	<select id="login" resultType="com.deu.Amall.domain.MemberVO">
 		select userId,password
@@ -19,4 +12,5 @@
 		and password= #{password}
 	
 	</select>
+	
 </mapper>
