@@ -5,14 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Login Form</title>
-    <script src = "http://localhost:8080/amall/login"></script>
+
 </head>
 <body>
 	<h1>Login Form</h1> <!-- 로그인 제목-->
 	
 	다시 로그인 해주세요.
 	
-   		 <form action="login" method = "post">
+   		 <form action="fail" method = "post">
 			<table>
 				<tr><td>Login Select</td> <!-- 로그인 종류 선택-->
 					<td><select name ="userType">

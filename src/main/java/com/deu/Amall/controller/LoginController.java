@@ -29,7 +29,7 @@ public class LoginController {
 	}
 	
 	//로그인 post
-	@RequestMapping(value = "/loginpage", method = RequestMethod.POST)
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String postLoginpage(LoginVO loginvo) throws Exception
 	{
 		
@@ -37,10 +37,13 @@ public class LoginController {
 		
 		PubMap signin = service.login(loginvo);
 		
+		log.info(signin.getString("userId"));
+		log.info(signin.getString("password"));
+		
 		if(signin.getString("userId") == null || signin.getString("password")== null) { 
 			//로그인 실패
 			
-			return "fail";
+			return "/fail";
 		}
 		else {
 			//로그인 성공

@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Login Form</title>
-    <script src = "http://localhost:8080/amall/login"></script>
+
 </head>
 <body>
 	<h1>Login Form</h1> <!-- 로그인 제목-->
