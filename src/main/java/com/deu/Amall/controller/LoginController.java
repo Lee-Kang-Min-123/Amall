@@ -40,7 +40,7 @@ public class LoginController {
 		if(signin.getString("userId") == null || signin.getString("password")== null) { 
 			//로그인 실패
 			
-			return "loginpage";
+			return "fail";
 		}
 		else {
 			//로그인 성공

@@ -12,10 +12,10 @@
    		 <form action="login" method = "post">
 			<table>
 				<tr><td>Login Select</td> <!-- 로그인 종류 선택-->
-					<td><select name ="usertype">
-						<option name="usertype" value="unknown">Your Select
-						<option name="usertype" value="A">Administrator
-						<option name="usertype" value="C">Customer</select>
+					<td><select name ="userType">
+						<option name="userType" value="unknown">Your Select
+						<option name="userType" value="A">Administrator
+						<option name="userType" value="C">Customer</select>
 				</td></tr>
 				<!-- 유저이름, 패스워드-->
 				<tr><td>Username:</td><td>
