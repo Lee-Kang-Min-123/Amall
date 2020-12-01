@@ -1,18 +1,23 @@
 package com.deu.Amall.service;
 
-import javax.inject.Inject;
-import javax.servlet.http.HttpSession;
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import com.deu.Amall.dao.LoginMapper;
 import com.deu.Amall.domain.LoginVO;
 import com.deu.Amall.util.PubMap;
 
+import lombok.AllArgsConstructor;
+import lombok.extern.log4j.Log4j;
+
+@Log4j
 @Service
+@AllArgsConstructor
+@Primary
 public class LoginServiceImpl implements LoginService{
 	
-	 @Inject
+	 @Autowired
 	 LoginMapper mapper;
 	
 	 //로그인

@@ -22,9 +22,10 @@ public class LoginController {
 	
 	//로그인 화면 get
 	@RequestMapping(value = "/loginpage", method = RequestMethod.GET)
-	public void getLoginpage() throws Exception
+	public String getLoginpage() throws Exception
 	{
 		log.info("get login");
+		return "loginpage";
 	}
 	
 	//로그인 post
