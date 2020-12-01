@@ -7,8 +7,8 @@ import lombok.Data;
 @Data
 public class LoginVO{
 	
-	private String userType;
-	private String userId;	//아이디
+	private String userType;	//사용자 종류
+	private String userId;		//아이디
 	private String password;	//비번
 	
 	

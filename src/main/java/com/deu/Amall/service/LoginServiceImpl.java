@@ -21,10 +21,6 @@ public class LoginServiceImpl implements LoginService{
 		return mapper.login(loginvo);
 	 }
 	 
-	 //로그아웃
-	 @Override
-	 public void logout(HttpSession session) throws Exception{
-		// session.invalidate();
-	 }
+
 
 }

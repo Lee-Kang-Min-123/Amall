@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Login Form</title>
-    <script src = "http://localhost:8080/amall/home"></script>
+    <script src = "http://localhost:8080/amall/login"></script>
 </head>
 <body>
 	<h1>Login Form</h1> <!-- 로그인 제목-->
@@ -19,7 +19,7 @@
 				</td></tr>
 				<!-- 유저이름, 패스워드-->
 				<tr><td>Username:</td><td>
-					<input type = "text" name="username" size="24"></td></tr>
+					<input type = "text" name="userId" size="24"></td></tr>
 				<tr><td>Password:</td><td>
 					<input type ="password" name="password" size="24"></td>
 				</tr></table>
