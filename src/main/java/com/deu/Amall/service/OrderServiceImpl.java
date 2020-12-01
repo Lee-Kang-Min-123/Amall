@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.deu.Amall.dao.OrderMapper;
@@ -36,7 +37,7 @@ public class OrderServiceImpl implements OrderService {
 	}
 
 	@Override
-	@Transactional
+	@Transactional(isolation = Isolation.READ_COMMITTED)
 	public int generateOrder(String userId) throws Exception {
 
 		// todo -- check basket is empty
