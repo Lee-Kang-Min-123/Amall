@@ -3,18 +3,24 @@
 
 
 <mapper namespace="com.deu.Amall.dao.OrderMapper">
-	<select id="getMaster" resultType="com.deu.Amall.domain.OrderMasterVO">
-		SELECT *
+	<select id="getMaster" resultType="com.deu.Amall.util.PubMap">
+		SELECT order_id, order_date, order_amt
 		FROM ordermaster
-		where order_id = #{orderId}
+		WHERE order_id = #{orderId}
 	</select>
 
 	<select id="getList" resultType="com.deu.Amall.util.PubMap">
-		SELECT *
-		FROM orderlist
-		where order_id = #{orderId}
+		SELECT o.order_id, o.order_seq, p.product_name, o.qty, o.product_price 
+		FROM orderlist o
+		  INNER JOIN product p ON o.product_id = p.product_id
+		WHERE o.order_id = #{orderId}
 	</select>
-	
+
+	<select id="getBasketList" resultType="com.deu.Amall.util.PubMap">
+		SELECT product_id, product_price, qty
+		FROM basket
+		WHERE user_id = #{userId}
+	</select>
 <!--    	<insert id="insertOrderMaster" useGeneratedKeys="true" keyColumn="order_id" keyProperty="orderId"> -->
 	<insert id="insertOrderMaster" >
 
@@ -33,5 +39,31 @@
 		#{insrtUserId}, sysdate, #{insrtUserId}, sysdate
 		)
 	</insert>
+
+	<insert id="insertOrderList" >
+
+		<selectKey keyProperty="orderSeq" order="BEFORE"
+			resultType="int">
+			SELECT NVL(MAX(order_seq) + 1, 1) FROM orderlist 
+			 WHERE order_id = #{orderId} 
+		</selectKey>
+
+		INSERT INTO orderlist
+		(order_id, order_seq, product_id, qty, product_price,  
+		 insrt_user_id, insrt_dt, updt_user_id, updt_dt)
+		VALUES
+		(
+		#{orderId}, #{orderSeq}, #{productId}, ${qty}, ${productPrice},
+		#{insrtUserId}, sysdate, #{insrtUserId}, sysdate
+		)
+	</insert>
+
+	<update id="updateTotalAmount" >
+		UPDATE ordermaster
+			SET order_amt = 
+			    ( SELECT NVL(SUM(qty * product_price ),0) FROM orderlist 
+			        WHERE order_id = ${orderId} )
+			WHERE order_id = ${orderId}
+	</update>
 	
 </mapper>
