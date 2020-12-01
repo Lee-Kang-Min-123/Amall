@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<!-- 다른 mapper와 중복되지 않도록 네임스페이스 기재 -->
+<mapper namespace="com.deu.Amall.dao.BasketMapper">
+<!-- 장바구니에 담기 -->
+    <insert id="insert">
+        insert into basket (user_id, product_id, product_price, qty, INSRT_USER_ID, INSRT_DT, UPDT_USER_ID, UPDT_DT)
+        values 
+          (#{userId}, #{productId}, #{productPrice}, #{qty}, #{insrtUserId}, sysdate, #{insrtUserId}, sysdate)
+
+    </insert>
+    
+    <select id="listCart" resultType="com.deu.Amall.domain.BasketVO">    
+        select cart_id, p.product_id, b.userid, name, product_name, amount, price, (price*amount) money
+        <!-- 장바구니의 번호, 상품 번호, 회원번호, 회원이름, 상품이름, 상품의양, 상품1개의 가격, 상품의 전체가격을 검색한다.-->
+        <!--양쪽 테이블에 다 있는 속성이면 어떤 테이블의 속성인지 정확히 표기해주어야 한다.-->
+        
+        from userInfo m, basket b, product p
+        <!-- 회원테이블과, 장바구니 테이블과, 상품테이블로 부터 -->
+        
+        where u.userid=c.userid and b.product_id=p.product_id and b.userid=#{userid} order by cart_id
+        <!--회원테이블의 회원id와 장바구니테이블의 회원id가 같고, 장바구니의 상품id와 상품테이블의 상품id가 같고, 장바구니테이블의 회원id가  장바구니에 저장되있는 회원id와 같을때-->
+        <!-- 장바구니에 관한 정보를 담은 sql문이다. -->
+                    
+    </select>
+    
+    
+    <delete id="delete">
+    
+    </delete>
+</mapper>
