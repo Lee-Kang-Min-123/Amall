@@ -9,6 +9,11 @@
 <body>
 
 	<h1>Welcome!</h1>
+	
+	<form action = "logout" method="post">
+		<input type = "submit" value="logout">
+	</form>
+
 
 </body>
 </html>

@@ -1,5 +1,7 @@
 package com.deu.Amall.service;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
@@ -26,6 +28,11 @@ public class LoginServiceImpl implements LoginService{
 		return mapper.login(loginvo);
 	 }
 	 
-
+	 //로그아웃
+	 @Override
+	 public void logout(HttpSession session) throws Exception{
+		 session.invalidate();
+	 }
+	 
 
 }
