@@ -9,6 +9,12 @@
 	<h2>회원 가입</h2>
 	<form action="login" method="post">
 		<table>
+			<tr><td>Login Select</td>
+					<td><select name ="userType">
+						<option name="userType" value="unknown">Your Select
+						<option name="userType" value="A">Administrator
+						<option name="userType" value="C">Customer</select>
+			</td></tr>
 			<tr><td>이름:</td><td>
 				<input type="text" name="userName" size="24"></td></tr>
 			<tr><td>ID:</td><td>

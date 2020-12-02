@@ -10,8 +10,8 @@
     </select>
     
 	<insert id="insert" keyProperty="userId">
-		insert into user_info (user_id,password,birthday,gender,email,contact,address,insrt_User_Id,insrt_Dt,updt_User_Id,updt_Dt)
-		values (#{userId},	#{password}, #{birthday}, #{gender}, #{email}, #{contact}, #{address}, #{insrtUserId}, sysdate, #{insrtUserId}, sysdate)
+		insert into user_info (user_id,user_type,user_name,password,birthday,gender,email,contact,address,insrt_User_Id,insrt_Dt,updt_User_Id,updt_Dt)
+		values (#{userId}, #{userType}, #{userName}, #{password}, #{birthday}, #{gender}, #{email}, #{contact}, #{address}, #{insrtUserId}, sysdate, #{insrtUserId}, sysdate)
 	</insert>
 	
 	
