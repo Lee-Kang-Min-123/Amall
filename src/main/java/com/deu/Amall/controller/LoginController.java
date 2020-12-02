@@ -57,6 +57,7 @@ public class LoginController {
 		else { // 로그인 성공
 			session.setAttribute("signin", signin); //signin에 로그인 정보 저장
 
+			
 			return "Productlist"; // welcome 페이지로 이동
 		}
 		

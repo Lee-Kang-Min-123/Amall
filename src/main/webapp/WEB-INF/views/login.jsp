@@ -11,7 +11,7 @@
 
 </head>
 <body>
-	<h1>Login Form</h1> <!-- 로그인 제목-->
+	<h1>Amall Login Form</h1> <!-- 로그인 제목-->
 		<form name='loginForm' action="login" method = "post">
 			<table>
 				<tr><td>Login Select</td> <!-- 로그인 종류 선택-->
