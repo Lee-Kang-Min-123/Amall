@@ -12,7 +12,7 @@ public class OrderListVO{
 	private int orderSeq;
 	private int productId;
 	private int qty;
-	private double productPrice;
+	private double productPrice; //제품가격
 
 	private String insrtUserId;
 	private Date insrtDt;
