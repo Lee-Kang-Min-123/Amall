@@ -6,10 +6,8 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.deu.Amall.domain.LoginVO;
@@ -56,12 +54,19 @@ public class LoginController {
 		}
 		
 		else { // 로그인 성공
-			session.setAttribute("signin", signin); //signin에 로그인 정보 저장
-
 			
-			return "Productlist"; // productlist 페이지로 이동
+			session.setAttribute("signin", signin); //signin에 로그인 정보 저장
+			
+			if(loginvo.getUserType().equals("C")) {
+				
+				return "welcome";
+			}
+			else {
+			
+				return "Productlist"; // productlist 페이지로 이동
+			}
 		}
-		
+	
 	}
 	
 	//로그아웃
