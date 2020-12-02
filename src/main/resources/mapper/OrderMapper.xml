@@ -26,7 +26,7 @@
 
 		<selectKey keyProperty="orderId" order="BEFORE"
 			resultType="int">
-			SELECT NVL(MAX(order_id) + 1, 1) FROM ordermaster
+			SELECT NVL(MAX(order_id), 0) + 1 FROM ordermaster
 		</selectKey>
 
 		INSERT INTO ordermaster
@@ -44,7 +44,7 @@
 
 		<selectKey keyProperty="orderSeq" order="BEFORE"
 			resultType="int">
-			SELECT NVL(MAX(order_seq) + 1, 1) FROM orderlist 
+			SELECT NVL(MAX(order_seq), 0) + 1 FROM orderlist 
 			 WHERE order_id = #{orderId} 
 		</selectKey>
 
