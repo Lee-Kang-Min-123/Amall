@@ -8,7 +8,7 @@ import com.deu.Amall.util.PubMap;
 public interface LoginMapper {
 	
 	//로그인
-	public PubMap login(LoginVO loginvo);
+	public int login(LoginVO loginvo);
 	
 
 	

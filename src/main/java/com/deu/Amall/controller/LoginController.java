@@ -14,7 +14,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.deu.Amall.domain.LoginVO;
 import com.deu.Amall.service.LoginService;
-import com.deu.Amall.util.PubMap;
 
 import lombok.extern.log4j.Log4j;
 
@@ -43,11 +42,11 @@ public class LoginController {
 		
 		log.info("post login");
 		
-		PubMap signin = service.login(loginvo);
+		int signin = service.login(loginvo);
 		
 		log.info("signin" + signin);
 		
-		if(signin == null) { // 로그인에 실패하면 signin에 null이라고 저장
+		if(signin == 0) { // 로그인에 실패하면 signin에 null이라고 저장
 			
 			session.setAttribute("signin", null);
 			rttr.addFlashAttribute("msg", false); //메시지
@@ -56,11 +55,9 @@ public class LoginController {
 		}
 		
 		else { // 로그인 성공
-			
-			if(signin.getString("userType") == "A") {
-				session.setAttribute("signin", signin); //signin에 로그인 정보 저장
-				return "Productlist"; // welcome 페이지로 이동
-			}
+			session.setAttribute("signin", signin); //signin에 로그인 정보 저장
+
+			return "Productlist"; // welcome 페이지로 이동
 		}
 		
 	}
