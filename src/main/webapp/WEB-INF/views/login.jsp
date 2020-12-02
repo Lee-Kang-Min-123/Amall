@@ -29,7 +29,7 @@
 					<input type = "submit" value="Login">
 		
 		<c:if test= "${msg == false }">
-			<p style = "color : red;">로그인 실패! 아이디와 비밀번호 확인해주세요.</p>
+			<p style = "color : red;">로그인 실패! 아이디와 비밀번호,사용자 유형을 확인해주세요.</p>
 		</c:if>
 				
 		</form>

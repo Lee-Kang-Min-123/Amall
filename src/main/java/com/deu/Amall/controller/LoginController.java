@@ -58,7 +58,7 @@ public class LoginController {
 			session.setAttribute("signin", signin); //signin에 로그인 정보 저장
 
 			
-			return "welcome"; // welcome 페이지로 이동
+			return "Productlist"; // welcome 페이지로 이동
 		}
 		
 	}
