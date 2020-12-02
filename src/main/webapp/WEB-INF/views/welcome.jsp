@@ -10,7 +10,7 @@
 
 	<h1>Welcome!</h1>
 	
-	<form action = "logout" method="post">
+	<form action = "logout" method="GET">
 		<input type = "submit" value="logout">
 	</form>
 

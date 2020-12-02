@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+     
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,9 +12,7 @@
 </head>
 <body>
 	<h1>Login Form</h1> <!-- 로그인 제목-->
-		 <c:if test = "${signin == null }">
-   		 <form name='loginForm' action="login" method = "post">
-   		
+		<form name='loginForm' action="login" method = "post">
 			<table>
 				<tr><td>Login Select</td> <!-- 로그인 종류 선택-->
 					<td><select name ="userType">
@@ -26,8 +27,6 @@
 					<input type ="password" name="password" size="24"></td>
 				</tr></table>
 					<input type = "submit" value="Login">
-		
-		</c:if>
 		
 		<c:if test= "${msg == false }">
 			<p style = "color : red;">로그인 실패! 아이디와 비밀번호 확인해주세요.</p>

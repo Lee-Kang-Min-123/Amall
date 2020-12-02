@@ -5,10 +5,10 @@
 <mapper namespace="com.deu.Amall.dao.LoginMapper">
 	
 <!-- 로그인 -->
-<select id="login" resultType="com.deu.Amall.util.PubMap">
- SELECT user_type, user_id, password
+<select id="login" resultType="int">
+ SELECT count(*)
  FROM user_info
- WHERE user_id = #{userId}
+ WHERE user_type = #{userType} AND user_id = #{userId} AND password = #{password}
 </select>
 	
 </mapper>
