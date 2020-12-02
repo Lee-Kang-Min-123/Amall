@@ -12,7 +12,7 @@
 	<h2>Hello</h2>
  	<form action="paymentlist" method="post">
  		<input type ="submit" value="All payment">
- 		</form>
+ 	</form>
  		
   <table border="2px">
   <tr>
@@ -28,5 +28,11 @@
   	<form action="productcreate" method="post">
   		<input type ="submit" value="create">
   	</form>
+  	
+  	<hr/>
+  	<form action = "logout" method="GET">
+		<input type = "submit" value="logout">
+	</form>
+  	
 </body>
 </html>

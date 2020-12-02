@@ -24,7 +24,7 @@ public class LoginServiceImpl implements LoginService{
 	
 	 //로그인
 	 @Override
-	 public int login(LoginVO loginvo) throws Exception{
+	 public PubMap login(LoginVO loginvo) throws Exception{
 		return mapper.login(loginvo);
 	 }
 	 

@@ -8,7 +8,7 @@ import com.deu.Amall.util.PubMap;
 public interface LoginService {
 	
 	//로그인
-	public int login(LoginVO loginvo) throws Exception;
+	public PubMap login(LoginVO loginvo) throws Exception;
 
 	//로그아웃
 	public void logout(HttpSession session) throws Exception;
