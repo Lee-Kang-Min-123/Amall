@@ -37,7 +37,7 @@
 		<hr/> <!-- 구분 선-->
 		<!-- 회원가입 부분-->
 		Amall 회원이 아니시라면 회원가입을 진행해주세요!
-		<form action = "join" method="post">
+		<form action = "join" method="get">
 			<input type="submit" value="Join">
 		</form>
 </body>
