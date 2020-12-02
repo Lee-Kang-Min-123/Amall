@@ -34,6 +34,7 @@ public class LoginController {
 		return "login";
 	}
 	
+	
 	//로그인 post
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String postLogin(LoginVO loginvo, HttpSession session,
