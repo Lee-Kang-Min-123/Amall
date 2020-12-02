@@ -3,8 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
 
-<html>
-<body>
-<h2>Hello World! 안녕하세요.</h2>
-</body>
-</html>
+<script language="javascript">
+	location.href="Amall/main.jsp";
+</script>
+
