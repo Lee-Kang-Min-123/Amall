@@ -24,41 +24,49 @@
   
 </head>
 <body>
-
+	
 	<form role="form" action="pay" method="post">
+	<table border=1>
+	<tr>
+	<td>User ID</td>
+	<td><input class="form-control" name='userId'
+				value='<c:out value="${userId }"/>' readonly="readonly"> </td>
+	</tr>
+	
+	<tr>
+	<td>Order ID</td>
+	<td><input class="form-control" name='orderId'
+				value='<c:out value="${orderId }"/>' readonly="readonly"> </td>
+	</tr>
+	
+	<tr>
+	<td>Amount</td>
+	<td><input class="form-control" name='amount'
+				value='<c:out value="${amount }"/>' readonly="readonly"> </td>
+	</tr>
+	
+	<tr>
+	<td>Address</td>
+	<td> <input class="form=control" name='address'></td>
+	</tr>
+	
+	<tr>
+	<td>Contact</td>
+	<td><input class="form=control" name='contact'> </td>
+	</tr>
+	
+	<tr>
+	<td>Creditcard Number</td>
+	<td><input class="form=control"	name="creditcardNumber"> </td>
+	</tr>
+	
+	<tr>
+	<td>Creditcard pass</td>
+	<td><input class="form=control"	name='creditcardPassword'></td>
+	</tr>
 
-		<div class="form-group">
-			<label>User ID</label> <input class="form-control" name='userId'
-				value='<c:out value="${userId }"/>' readonly="readonly">
-		</div>
+	</table>
 
-		<div class="form-group">
-			<label>Order ID</label> <input class="form-control" name='orderId'
-				value='<c:out value="${orderId }"/>' readonly="readonly">
-		</div>
-
-		<div class="form-group">
-			<label>Amount</label> <input class="form-control" name='amount'
-				value='<c:out value="${amount }"/>' readonly="readonly">
-		</div>
-
-		<div class="form-group">
-			<label>Address</label> <input class="form=control" name='address'>
-		</div>
-
-		<div class="form-group">
-			<label>Contact</label> <input class="form=control" name='contact'>
-		</div>
-
-		<div class="form-group">
-			<label>Creditcard Number</label> <input class="form=control"
-				name="creditcardNumber">
-		</div>
-
-		<div class="form-group">
-			<label>Creditcard pass</label> <input class="form=control"
-				name='creditcardPassword'>
-		</div>
 
 		<button type="submit" class="btn btn-default">Submit Button</button>
 		<button type="reset" class="btn btn-default">Reset Button</button>

@@ -25,42 +25,46 @@
 </head>
 <body>
 
-	<form role="form" action="paylist" method="get">
+	<form role="form" action="paylist" method="get">   
+	<table border=1>
+		<tr>
+		<td>User ID</td>
+		<td>${board.userId }</td>
+		</tr>
+		
+		<tr>
+		<td>Order ID</td>
+		<td>${board.orderId }</td>
+		</tr>
+		
+		<tr>
+		<td>Amount</td>
+		<td>${board.amount }</td>
+		</tr>
+		
+		<tr>
+		<td>Address</td>
+		<td>${board.address }</td>
+		</tr>
+		
+		<tr>
+		<td>Contact</td>
+		<td>${board.contact }</td>
+		</tr>
+		
+		<tr>
+		<td>Creditcard Number</td>
+		<td>${board.creditcardNumber}</td>
+		</tr>
+		
+		<tr>
+		<td>Creditcard pass</td>
+		<td>${board.creditcardPassword }</td>
+		</tr>
+		
+		
 
-		<div class="form-group">
-			<label>User ID</label> <input class="form-control" name='userId'
-				value='<c:out value="${board.userId }"/>' readonly="readonly">
-		</div>
-
-		<div class="form-group">
-			<label>Order ID</label> <input class="form-control" name='orderId'
-				value='<c:out value="${board.orderId }"/>' readonly="readonly">
-		</div>
-
-		<div class="form-group">
-			<label>Amount</label> <input class="form-control" name='amount'
-				value='<c:out value="${board.amount }"/>' readonly="readonly">
-		</div>
-
-		<div class="form-group">
-			<label>Address</label> <input class="form=control" name='address'
-			value='<c:out value="${board.address }"/>' readonly="readonly">
-		</div>
-
-		<div class="form-group">
-			<label>Contact</label> <input class="form=control" name='contact'
-			value='<c:out value="${board.contact }"/>' readonly="readonly">
-		</div>
-
-		<div class="form-group">
-			<label>Creditcard Number</label> <input class="form=control" name='creditcardNumber'
-			value='<c:out value="${board.creditcardNumber }"/>' readonly="readonly">
-		</div>
-
-		<div class="form-group">
-			<label>Creditcard pass</label> <input class="form=control" name='creditcardPassword'
-			value='<c:out value="${board.creditcardPassword }"/>' readonly="readonly">
-		</div>
+		</table>
 		
 		<button type="button" onClick="location.href='http://localhost:8080/amall/order?orderId='+'${board.orderId }'"  class="btn btn-default">Order Check</button>
 		
