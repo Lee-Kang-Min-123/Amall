@@ -52,12 +52,12 @@
 
 		<div class="form-group">
 			<label>Creditcard Number</label> <input class="form=control"
-				name="creditNum">
+				name="creditcardNumber">
 		</div>
 
 		<div class="form-group">
 			<label>Creditcard pass</label> <input class="form=control"
-				name='creditPass'>
+				name='creditcardPassword'>
 		</div>
 
 		<button type="submit" class="btn btn-default">Submit Button</button>

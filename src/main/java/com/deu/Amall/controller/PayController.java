@@ -51,18 +51,19 @@ public class PayController {
 		
 		
 		
-		return "redirect:/order?orderId="+pay.getOrderId();
+		return "redirect:/paylist?payId="+pay.getPayId();
 		
 	}
 	
 	@GetMapping("/paylist")
 	public void paylist(@RequestParam("payId") int payId, Model model) {
 		log.info("paylist pageing..............");
+		
 		model.addAttribute("board", payservice.get(payId));
-		
-		
-		
+			
 		
 	}
+
+	
 	
 }

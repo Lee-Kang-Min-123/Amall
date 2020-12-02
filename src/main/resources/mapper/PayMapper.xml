@@ -22,7 +22,7 @@
 		insrt_user_id, insrt_dt, updt_user_id, updt_dt, amount)
 		
 		values (#{payId}, #{userId}, #{orderId}, #{address}, #{contact}, 
-		#{creditNum}, #{creditPass}, 
+		#{creditcardNumber}, #{creditcardPassword}, 
 		#{insrtUserId}, sysdate, #{insrtUserId}, sysdate, #{amount} )
 		
 	

@@ -44,7 +44,7 @@
 
 		<div class="form-group">
 			<label>Address</label> <input class="form=control" name='address'
-			value='<c:out value="${board.adress }"/>' readonly="readonly">
+			value='<c:out value="${board.address }"/>' readonly="readonly">
 		</div>
 
 		<div class="form-group">
@@ -53,14 +53,16 @@
 		</div>
 
 		<div class="form-group">
-			<label>Creditcard Number</label> <input class="form=control" name="creditNum"
-			value='<c:out value="${board.creditNum }"/>' readonly="readonly">
+			<label>Creditcard Number</label> <input class="form=control" name='creditcardNumber'
+			value='<c:out value="${board.creditcardNumber }"/>' readonly="readonly">
 		</div>
 
 		<div class="form-group">
-			<label>Creditcard pass</label> <input class="form=control" name='creditPass'
-			value='<c:out value="${board.creditPass }"/>' readonly="readonly">
+			<label>Creditcard pass</label> <input class="form=control" name='creditcardPassword'
+			value='<c:out value="${board.creditcardPassword }"/>' readonly="readonly">
 		</div>
+		
+		<button type="button" onClick="location.href='http://localhost:8080/amall/order?orderId='+'${board.orderId }'"  class="btn btn-default">Order Check</button>
 		
 
 	</form>

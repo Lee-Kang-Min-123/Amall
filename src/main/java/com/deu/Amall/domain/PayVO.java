@@ -13,8 +13,8 @@ public class PayVO {
 	private double amount;
 	private String address;
 	private String contact;
-	private String creditNum;
-	private String creditPass;
+	private String creditcardNumber;
+	private String creditcardPassword;
 	
 	private String insrtUserId;
 	private Date insrtDt;
