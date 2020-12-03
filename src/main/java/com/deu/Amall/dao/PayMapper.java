@@ -14,13 +14,17 @@ public interface PayMapper {
 	
 	public int deleteB(String userid);
 	
-	public int deleteP(String userid);
+	public int deleteP(int paymentId);
 	
 	public void insertO(OrderListVO order);
 	
 	public double readOrder(int orderId);
 	
 	public PayVO read(int payId);
+	
+	public int deleteOM(int orderId);
+	
+	public int deleteO(int orderId);
 	
 	
 

@@ -7,7 +7,7 @@ public interface PayService {
 	
 	public boolean removeB(String userId);
 	
-	public boolean removeP(String userId);
+	public boolean removeP(int paymentId);
 	
 	public void register(PayVO pay);
 	
@@ -15,7 +15,11 @@ public interface PayService {
 	
 	public void update(int orderId, String userId);
 	
-	public PayVO get(int payId);
+	public PayVO get(int paymentId);
+	
+	public boolean removeOM(int orderId);
+	
+	public boolean removeO(int orderId);
 	
 	
 	

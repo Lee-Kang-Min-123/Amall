@@ -8,21 +8,13 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Welcome!</title>
-
-	<style>
-		html{
-			text-ailgn:center;
-		}
-		#d1{
-			
-		}
-	</style>
 </head>
 <body>
 
 	<h1 style="font-size: 4em;">Welcome Amall!</h1>
-	<div id="d1">
+	
 		<form name = "welcome" action="welcome" method = "get">
 	
 		</form>
@@ -36,7 +28,7 @@
 		<form action = "join" method="get">
 			<input type="submit" value="Join">
 		</form>
-	</div>
+	
 
 </body>
 </html>

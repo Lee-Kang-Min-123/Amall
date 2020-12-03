@@ -15,13 +15,23 @@
 <html>
 <head>
 <meta charset="UTF-8">
+
 <title>Pay</title>
 
 <style>
-     #button1 { position: relative; left:180px; bottom:0px }
-     #button2 { position: relative; left:250px; bottom:70px }
+     
+     table {
+        width: 60%;
+      }
+      table, th, td {
+        border: 1px solid #bcbcbc;
+        font-size: 20px;
+      }
+      .order-text {
+      	font-size: 20px;
+      }
   </style>
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
 </head>
 <body>
 	
@@ -68,10 +78,33 @@
 	</table>
 
 
-		<button type="submit" class="btn btn-default">Submit Button</button>
-		<button type="reset" class="btn btn-default">Reset Button</button>
+		<button type="submit" style="width:100pt;height:30pt;" class="btn btn-default">Submit Button</button>
+		<button type="reset" style="width:100pt;height:30pt;" data-oper="remove" class="btn btn-default">Cancel</button>
 
 	</form>
 
 </body>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		
+		var formObj = $("form");
+
+		$('button').on("click", function(e) {
+			
+			e.preventDefault();
+
+			var operation = $(this).data("oper");
+
+			console.log(operation);
+
+			if (operation === 'remove') {
+				formObj.attr("action", "payremove?orderId=${orderId}");
+			}
+			formObj.submit();
+		});
+	});
+</script>
+
+
 </html>
