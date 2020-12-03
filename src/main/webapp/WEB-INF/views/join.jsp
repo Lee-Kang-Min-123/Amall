@@ -7,7 +7,7 @@
 	<head><title>회원 가입</title></head>
 <body>
 	<h2>회원 가입</h2>
-	<form action="login" method="post">
+	<form action="join" method="post">
 		<table>
 			<tr><td>Login Select</td>
 					<td><select name ="userType">
@@ -32,7 +32,7 @@
 			<tr><td>주소:</td><td>
 				<input type="text" name="address" size="50"></td></tr>
 		</table>
-		<input type="submit" onclick="alert('가입이 완료되었습니다.');" value="가입" >
+		<input type="submit" value="가입" >
 		
 	</form>
 	</body>

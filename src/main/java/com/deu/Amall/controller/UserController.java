@@ -34,7 +34,7 @@ public class UserController {
 		service.register(user);
 		userId = user.getUserId();
 		
-		return "redirect:/user";
+		return "redirect:/login";
 	}
 	
 }
