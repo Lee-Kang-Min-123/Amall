@@ -11,6 +11,7 @@
 
 </head>
 <body>
+	
 	<h1>Amall Login Form</h1> <!-- 로그인 제목-->
 		<form name='loginForm' action="login" method = "post">
 			<table>
@@ -22,9 +23,9 @@
 				</td></tr>
 				<!-- 유저이름, 패스워드-->
 				<tr><td>Username:</td><td>
-					<input type = "text" name="userId" size="24"></td></tr>
+					<input type = "text" name="userId" size="24"  placeholder="id"></td></tr>
 				<tr><td>Password:</td><td>
-					<input type ="password" name="password" size="24"></td>
+					<input type ="password" name="password" size="24" placeholder="password"></td>
 				</tr></table>
 					<input type = "submit" value="Login">
 		
@@ -40,5 +41,6 @@
 		<form action = "join" method="get">
 			<input type="submit" value="Join">
 		</form>
+	
 </body>
 </html>
