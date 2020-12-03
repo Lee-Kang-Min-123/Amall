@@ -57,11 +57,11 @@ public class LoginController {
 			
 			session.setAttribute("signin", signin); //signin에 로그인 정보 저장
 			
-			if(loginvo.getUserType().equals("C")) {
+			if(loginvo.getUserType().equals("C")) { // 고객일때
 				
 				return "Productlist2";
 			}
-			else {
+			else { //관리자 일때
 			
 				return "Productlist"; // productlist 페이지로 이동
 			}
