@@ -32,9 +32,9 @@ public class PayServiceImpl implements PayService {
 	}
 	
 	@Override
-	public boolean removeP(String userid) {
+	public boolean removeP(int paymentId) {
 		
-		return mapper.deleteP(userid) == 1;
+		return mapper.deleteP(paymentId) == 1;
 	}
 	
 	@Override
@@ -81,11 +81,11 @@ public class PayServiceImpl implements PayService {
 	}
 	
 	@Override
-	public PayVO get(int payId) {
+	public PayVO get(int paymentId) {
 
-		log.info("get......" + payId);
+		log.info("get......" + paymentId);
 
-		return mapper.read(payId);
+		return mapper.read(paymentId);
 
 	}
 	@Override

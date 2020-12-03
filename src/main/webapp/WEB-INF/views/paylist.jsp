@@ -37,6 +37,13 @@
 
 	<form role="form" action="paylist" method="get">   
 	<table border=1>
+		
+		<tr>
+		<td>Payment ID</td>
+		<td><input class="form-control" name='paymentId'
+				value='<c:out value="${board.paymentId }"/>' readonly="readonly"></td>
+		</tr>
+		
 		<tr>
 		<td>User ID</td>
 		<td>${board.userId }</td>
@@ -78,6 +85,7 @@
 		</table>
 		
 		<button type="reset" data-oper="check" style="width:100pt;height:30pt;"  class="btn btn-default">Order Check</button>
+		<button type="reset" data-oper="paymentremove" style="width:100pt;height:30pt;"  class="btn btn-default">Cancel</button>
 		
 
 	</form>
@@ -98,10 +106,26 @@
 			console.log(operation);
 
 			if (operation === 'check') {
-				formObj.attr("action", "order?orderId=${board.orderId }");
+				formObj.attr("action", "order?orderId="+${board.orderId});
 			}
 			formObj.submit();
 		});
+
+		$('button').on("click", function(e) {
+			
+			e.preventDefault();
+
+			var operation = $(this).data("oper");
+
+			console.log(operation);
+
+			if (operation === 'paymentremove') {
+				formObj.attr("action", "paymentremove?paymentId="+${board.paymentId});
+			}
+			formObj.submit();
+		});
+
+		
 	});
 </script>
 
