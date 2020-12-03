@@ -14,7 +14,7 @@ public interface PayMapper {
 	
 	public int deleteB(String userid);
 	
-	public int deleteP(String userid);
+	public int deleteP(int paymentId);
 	
 	public void insertO(OrderListVO order);
 	

@@ -31,7 +31,7 @@
       	font-size: 20px;
       }
   </style>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
 </head>
 <body>
 	
@@ -79,7 +79,6 @@
 
 
 		<button type="submit" style="width:100pt;height:30pt;" class="btn btn-default">Submit Button</button>
-		<button type="reset" style="width:100pt;height:30pt;" class="btn btn-default">Reset Button</button>
 		<button type="reset" style="width:100pt;height:30pt;" data-oper="remove" class="btn btn-default">Cancel</button>
 
 	</form>
@@ -106,5 +105,6 @@
 		});
 	});
 </script>
+
 
 </html>

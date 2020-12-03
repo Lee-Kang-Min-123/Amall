@@ -12,7 +12,7 @@
 	
 	
 	<insert id="insertP">
-		<selectKey keyProperty="payId" order="BEFORE"
+		<selectKey keyProperty="paymentId" order="BEFORE"
 			resultType="int">
 			SELECT NVL(MAX(payment_id) + 1, 1) FROM pay
 		</selectKey>
@@ -21,7 +21,7 @@
 		creditcard_number, creditcard_password, 
 		insrt_user_id, insrt_dt, updt_user_id, updt_dt, amount)
 		
-		values (#{payId}, #{userId}, #{orderId}, #{address}, #{contact}, 
+		values (#{paymentId}, #{userId}, #{orderId}, #{address}, #{contact}, 
 		#{creditcardNumber}, #{creditcardPassword}, 
 		#{insrtUserId}, sysdate, #{insrtUserId}, sysdate, #{amount} )
 		
@@ -47,7 +47,7 @@
 	</delete>
 	
 	<delete id="deleteP">
-		delete Pay where USER_ID = #{userId}
+		delete Pay where Payment_ID = #{paymentId}
 	</delete>
 	
 	<delete id="deleteOM">
@@ -55,7 +55,7 @@
 	</delete>
 	
 	<select id="read" resultType="com.deu.Amall.domain.PayVO">
-		select * from pay where payment_id = #{payId}
+		select * from pay where payment_id = #{paymentId}
 	</select>
 	
 	<delete id="deleteO">

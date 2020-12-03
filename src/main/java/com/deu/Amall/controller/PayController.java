@@ -47,24 +47,22 @@ public class PayController {
 
 		payservice.register(pay);
 		
-		rttr.addFlashAttribute("result", pay.getPayId());
+		rttr.addFlashAttribute("result", pay.getPaymentId());
 		
 		
 		
-		return "redirect:/paylist?payId="+pay.getPayId();
+		return "redirect:/paylist?PaymentId="+pay.getPaymentId();
 		
 	}
 	
 	@GetMapping("/paylist")
-	public void paylist(@RequestParam("payId") int payId, Model model) {
+	public void paylist(@RequestParam("PaymentId") int PaymentId, Model model) {
 		log.info("paylist pageing..............");
 		
-		model.addAttribute("board", payservice.get(payId));
+		model.addAttribute("board", payservice.get(PaymentId));
 			
 		
 	}
-	
-	
 	
 	
 	
@@ -74,6 +72,21 @@ public class PayController {
 		payservice.removeO(orderId);
 		payservice.removeOM(orderId);
 		
+		return "redirect:/productlist";
+	}
+	
+	@GetMapping("/paymentremove")
+	public String removep(@RequestParam("paymentId") int paymentId) {
+		
+		int orderId;
+		
+		PayVO vo = payservice.get(paymentId);
+		
+		orderId = vo.getOrderId();
+		
+		payservice.removeP(paymentId);
+		payservice.removeO(orderId);
+		payservice.removeOM(orderId);
 		return "redirect:/productlist";
 	}
 

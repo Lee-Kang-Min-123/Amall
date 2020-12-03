@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 public class PayVO {
 	
-	private int payId;
+	private int paymentId;
 	private String userId;
 	private int orderId;
 	private double amount;
