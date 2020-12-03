@@ -32,6 +32,9 @@
   	<form action = "logout" method="GET">
 		<input type = "submit" value="logout">
 	</form>
+	<form action = "customercenter" method="get">
+	<input type="submit" value="고객센터">
+	</form>
   	
 </body>
 </html>
