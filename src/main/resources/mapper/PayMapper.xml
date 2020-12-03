@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.deu.Amall.dao.PayMapper">
+
+	<select id="getList"  resultType="com.deu.Amall.domain.PayVO">
+	<![CDATA[
+		select * from Basket where USER_ID= #{userId}
+	]]>
+	
+	</select>
+	
+	
+	<insert id="insertP">
+		<selectKey keyProperty="payId" order="BEFORE"
+			resultType="int">
+			SELECT NVL(MAX(payment_id) + 1, 1) FROM pay
+		</selectKey>
+		
+		insert into Pay (payment_id, user_id, order_id, address, contact, 
+		creditcard_number, creditcard_password, 
+		insrt_user_id, insrt_dt, updt_user_id, updt_dt, amount)
+		
+		values (#{payId}, #{userId}, #{orderId}, #{address}, #{contact}, 
+		#{creditcardNumber}, #{creditcardPassword}, 
+		#{insrtUserId}, sysdate, #{insrtUserId}, sysdate, #{amount} )
+		
+	
+	</insert>
+	
+	<insert id="insertO">
+		insert into Orderlist (order_id, order_seq, product_id, qty, product_price, 
+		insrt_user_id, insrt_dt, updt_user_id, updt_dt)
+		values (#{orderId}, #{orderSeq}, #{productId}, #{qty}, #{productPrice}, 
+		'insrtuser', sysdate, 'updtuser', sysdate)
+	</insert>
+	
+	
+	
+	<select id="readOrder" resultType="double">
+		select order_amt from ORDERMASTER where Order_ID = #{orderId}
+	</select>
+	
+	
+	<delete id="deleteB">
+		delete BASKET where USER_ID = #{userId}
+	</delete>
+	
+	<delete id="deleteP">
+		delete Pay where USER_ID = #{userId}
+	</delete>
+	
+	<delete id="deleteO">
+		delete Ordermaster where ORDER_ID = #{orderId}
+	</delete>
+	
+	<select id="read" resultType="com.deu.Amall.domain.PayVO">
+		select * from pay where payment_id = #{payId}
+	</select>
+	
+
+
+
+</mapper>
