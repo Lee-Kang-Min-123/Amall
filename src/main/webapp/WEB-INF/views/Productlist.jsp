@@ -1,11 +1,10 @@
+<!--  고객전용 -->
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<!-- 어드민 전용 -->
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>상품</title>
 
@@ -27,13 +26,14 @@
   	</tr>
   	</table>
   	
-  	<form action="productcreate" method="post">
-  		<input type ="submit" value="create">
-  	</form>
+
   	
   	<hr/>
   	<form action = "logout" method="GET">
 		<input type = "submit" value="logout">
+	</form>
+<form action = "customercenter" method="get">
+	<input type="submit" value="고객센터">
 	</form>
   	
 </body>
