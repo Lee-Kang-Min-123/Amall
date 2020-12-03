@@ -10,6 +10,7 @@ public class BasketVO {
 	private int productId;
 	private int productPrice;
 	private int qty;
+	private String productName;
 	private String insrtUserId;
 	private Date insrtDt;
 	private String updtUserId;
