@@ -14,7 +14,9 @@
  	<form action="paymentlist" method="post">
  		<input type ="submit" value="All payment">
  	</form>
- 		
+ 		<form action="Basketlist" method="post">
+ 		<input type ="submit" value="장바구니목록">
+ 	</form>
   <table border="2px">
   <tr>
   	<th width="100">Product ID</th>
