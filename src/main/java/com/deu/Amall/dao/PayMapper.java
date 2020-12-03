@@ -22,6 +22,10 @@ public interface PayMapper {
 	
 	public PayVO read(int payId);
 	
+	public int deleteOM(int orderId);
+	
+	public int deleteO(int orderId);
+	
 	
 
 }

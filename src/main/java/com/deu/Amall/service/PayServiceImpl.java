@@ -88,6 +88,16 @@ public class PayServiceImpl implements PayService {
 		return mapper.read(payId);
 
 	}
+	@Override
+	public boolean removeOM(int orderId) {
+		
+		return mapper.deleteOM(orderId) == 1;
+	}
 	
+	@Override
+	public boolean removeO(int orderId) {
+		
+		return mapper.deleteO(orderId) == 1;
+	}
 
 }

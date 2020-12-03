@@ -63,6 +63,14 @@ public class PayController {
 			
 		
 	}
+	@PostMapping("/payremove")
+	public String remove(@RequestParam("orderId") int orderId) {
+		
+		payservice.removeO(orderId);
+		payservice.removeOM(orderId);
+		
+		return "redirect:/productlist";
+	}
 
 	
 	
