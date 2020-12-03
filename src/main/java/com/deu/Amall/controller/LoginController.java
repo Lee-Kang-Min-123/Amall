@@ -59,7 +59,7 @@ public class LoginController {
 			
 			if(loginvo.getUserType().equals("C")) {
 				
-				return "welcome";
+				return "Productlist2";
 			}
 			else {
 			
@@ -78,6 +78,15 @@ public class LoginController {
 		session.invalidate();
 		
 		return "redirect:login";
+	}
+	
+	@RequestMapping(value = "/welcome", method = RequestMethod.GET)
+	public String gethome( ) throws Exception
+	{
+		log.info("get login");
+		//model.addAttribute("msg", msg);   @RequestParam("msg") String msg, Model model
+		
+		return "welcome";
 	}
 	
 	/*

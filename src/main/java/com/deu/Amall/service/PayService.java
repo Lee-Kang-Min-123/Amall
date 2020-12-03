@@ -17,6 +17,10 @@ public interface PayService {
 	
 	public PayVO get(int payId);
 	
+	public boolean removeOM(int orderId);
+	
+	public boolean removeO(int orderId);
+	
 	
 	
 	

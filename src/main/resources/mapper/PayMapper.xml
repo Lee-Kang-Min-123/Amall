@@ -50,13 +50,20 @@
 		delete Pay where USER_ID = #{userId}
 	</delete>
 	
-	<delete id="deleteO">
+	<delete id="deleteOM">
 		delete Ordermaster where ORDER_ID = #{orderId}
 	</delete>
 	
 	<select id="read" resultType="com.deu.Amall.domain.PayVO">
 		select * from pay where payment_id = #{payId}
 	</select>
+	
+	<delete id="deleteO">
+		delete Orderlist where ORDER_ID = #{orderId}
+	</delete>
+	
+	
+	
 	
 
 
