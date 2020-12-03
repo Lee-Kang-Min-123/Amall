@@ -41,7 +41,7 @@ public class PayController {
 	}
 	
 	@PostMapping("/pay")
-	public String pay(PayVO pay, RedirectAttributes rttr) {
+	public String pay(PayVO pay, RedirectAttributes rttr ) {
 		
 		log.info("register: " + pay);
 
@@ -63,6 +63,11 @@ public class PayController {
 			
 		
 	}
+	
+	
+	
+	
+	
 	@PostMapping("/payremove")
 	public String remove(@RequestParam("orderId") int orderId) {
 		
