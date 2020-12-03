@@ -77,5 +77,8 @@ public String deleteAll(HttpSession session) {
 @GetMapping("/Productlist2")
 void productlist2() {
 }
+@GetMapping("/pay?userId=stableyoung")
+void pay() {
+}
 }
 

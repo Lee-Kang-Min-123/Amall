@@ -91,6 +91,7 @@ $(function(){
     </c:otherwise>
 </c:choose>
 <input type="button" value="상품목록" onclick="location.href='Productlist2'">
+<input type="button" value="결제" onclick="location.href='pay?userId=stableyoung'">
 <!--  <button type="button" id="btnList">상품목록</button>-->
 </body>
 </html>
