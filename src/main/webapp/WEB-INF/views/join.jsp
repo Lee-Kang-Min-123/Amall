@@ -6,7 +6,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<head><title>회원 가입</title></head>
 <body>
-	<h2>회원 가입</h2>
+	<h2>Amall 회원 가입</h2>
+	<hr>
+	<hr>
 	<form action="join" method="post">
 		<table>
 			<tr><td>Login Select</td>
