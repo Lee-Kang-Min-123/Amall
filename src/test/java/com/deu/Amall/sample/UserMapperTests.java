@@ -1,4 +1,4 @@
-package com.deu.Amall.dao;
+package com.deu.Amall.sample;
 
 import java.util.Date;
 
@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.deu.Amall.dao.UserMapper;
 import com.deu.Amall.domain.UserVO;
 
 import lombok.extern.log4j.Log4j;
